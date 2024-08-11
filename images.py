@@ -1,5 +1,5 @@
-# 读取图片文件
-with open("logo.png", "rb") as image_file:
-    # 将图片转换为十六进制字符串
-    hex_string = image_file.read().hex()
-print(hex_string)
+import base64
+
+with open("icon.ico", "rb") as icon_file:
+    encoded_string = base64.b64encode(icon_file.read()).decode('utf-8')
+    print(encoded_string)
